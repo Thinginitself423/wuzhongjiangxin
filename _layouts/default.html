@@ -12,16 +12,20 @@
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 </head>
 <body>
+    <!-- 顶部内容区域，可以由页面自定义 -->
+    {{ content }}
+    
+    <!-- 导航栏放在内容下方 -->
     {% include header.html %}
     
     <div class="container mt-4">
         <div class="row">
-            <main class="col-md-9">
-                {{ content }}
-            </main>
             <aside class="col-md-3">
                 {% include sidebar.html %}
             </aside>
+            <main class="col-md-9">
+                <!-- 这里是页面内容，已经在上方渲染 -->
+            </main>
         </div>
     </div>
     

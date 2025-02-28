@@ -1,7 +1,7 @@
 /* 全局样式 */
 body {
   font-family: 'Microsoft YaHei', sans-serif;
-  background-color: #f3d69c;
+  background-color: #ffefcf;
   color: #333;
 }
 
@@ -75,4 +75,37 @@ body {
   background-size: cover;
   background-position: center;
   margin-bottom: 2rem;
+}
+/* 顶部大图样式 */
+.hero-image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image img {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 导航栏置顶 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
