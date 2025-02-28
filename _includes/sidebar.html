@@ -1,9 +1,32 @@
-<div class="sidebar">
-  <h4>分类</h4>
-  <ul>
-    <li><a href="{{ '/buildings/' | relative_url }}">建筑成品</a></li>
-    <li><a href="{{ '/materials/' | relative_url }}">建材百科</a></li>
-    <li><a href="{{ '/element-designs/' | relative_url }}">元素设计</a></li>
-    <li><a href="{{ '/tutorials/' | relative_url }}">操作教程</a></li>
-  </ul>
+<div class="sidebar sticky-top" style="top: 2rem;">
+  <div class="card mb-4">
+      <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">分类导航</h5>
+      </div>
+      <div class="card-body">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                  <a href="{{ '/buildings/' | relative_url }}" class="text-decoration-none">建筑成品</a>
+              </li>
+              <li class="list-group-item">
+                  <a href="{{ '/materials/' | relative_url }}" class="text-decoration-none">建材百科</a>
+              </li>
+              <li class="list-group-item">
+                  <a href="{{ '/element-designs/' | relative_url }}" class="text-decoration-none">元素设计</a>
+              </li>
+              <li class="list-group-item">
+                  <a href="{{ '/tutorials/' | relative_url }}" class="text-decoration-none">操作教程</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="card">
+      <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">关于本站</h5>
+      </div>
+      <div class="card-body">
+          <p class="card-text">雾锁王国建筑攻略社区致力于分享游戏中最实用的建筑技巧和灵感。</p>
+      </div>
+  </div>
 </div>
