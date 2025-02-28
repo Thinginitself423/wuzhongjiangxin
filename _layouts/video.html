@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<article class="building-showcase">
+  <h1 class="mb-3">{{ page.title }}</h1>
+  
+  <div class="meta-info mb-4">
+    <span class="badge bg-primary">{{ page.building_type }}</span>
+    <span class="badge bg-secondary">{{ page.building_style }}</span>
+    <span class="text-muted">上传时间: {{ page.date | date: "%Y-%m-%d" }}</span>
+  </div>
+
+  <div class="video-container mb-4">
+    {% include video-embed.html type=page.video_platform id=page.video_id %}
+  </div>
+  
+  {% if page.ai_summary %}
+  <div class="ai-summary-container p-3 bg-light mb-4">
+    <h4>AI摘要</h4>
+    <p>{{ page.ai_summary }}</p>
+  </div>
+  {% endif %}
+  
+  <div class="content">
+    {{ content }}
+  </div>
+  
+  {% if page.coordinates %}
+  <div class="coordinates-container mt-4">
+    <h4>坐标位置</h4>
+    <p>X: {{ page.coordinates.x }}, Y: {{ page.coordinates.y }}, Z: {{ page.coordinates.z }}</p>
+  </div>
+  {% endif %}
+  
+  {% if page.materials %}
+  <div class="materials-container mt-4">
+    <h4>主要使用材料</h4>
+    <ul>
+      {% for material in page.materials %}
+      <li>{{ material }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</article>

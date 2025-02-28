@@ -1,0 +1,28 @@
+<footer class="bg-dark text-light mt-5 py-4">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <h5>{{ site.title }}</h5>
+              <p>{{ site.description }}</p>
+          </div>
+          <div class="col-md-3">
+              <h5>栏目</h5>
+              <ul class="list-unstyled">
+                  <li><a href="{{ '/element-designs/' | relative_url }}" class="text-light">元素设计</a></li>
+                  <li><a href="{{ '/materials/' | relative_url }}" class="text-light">建材百科</a></li>
+                  <li><a href="{{ '/tutorials/' | relative_url }}" class="text-light">操作教程</a></li>
+                  <li><a href="{{ '/buildings/' | relative_url }}" class="text-light">建筑成品</a></li>
+              </ul>
+          </div>
+          <div class="col-md-3">
+              <h5>关注我们</h5>
+              <p>本站内容持续更新中...</p>
+          </div>
+      </div>
+      <div class="row mt-3">
+          <div class="col text-center">
+              <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. 保留所有权利。</p>
+          </div>
+      </div>
+  </div>
+</footer>

@@ -1,0 +1,15 @@
+{% if include.type == "bilibili" %}
+<div class="embed-responsive embed-responsive-16by9 mb-4">
+    <iframe src="//player.bilibili.com/player.html?aid={{ include.id }}" 
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+            class="embed-responsive-item">
+    </iframe>
+</div>
+{% elsif include.type == "youtube" %}
+<div class="embed-responsive embed-responsive-16by9 mb-4">
+    <iframe src="https://www.youtube.com/embed/{{ include.id }}" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen class="embed-responsive-item">
+    </iframe>
+</div>
+{% endif %}

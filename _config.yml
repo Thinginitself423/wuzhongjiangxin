@@ -1,0 +1,44 @@
+# 网站基本信息
+title: 雾锁王国建筑攻略社区
+description: 专注于雾锁王国游戏的建筑攻略和灵感分享
+baseurl: /wuzhongjiangxin
+url: https://Thinginitself423.github.io
+
+# 构建设置
+markdown: kramdown
+permalink: /:categories/:title/
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# 分页设置
+paginate: 12
+paginate_path: "/page:num/"
+
+# 集合定义
+collections:
+  materials:
+    output: true
+    permalink: /materials/:path/
+  element-designs:
+    output: true
+    permalink: /element-designs/:path/
+  buildings:
+    output: true
+    permalink: /buildings/:path/
+
+# 默认YAML前置数据
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "buildings"
+    values:
+      layout: "video"

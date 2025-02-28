@@ -1,0 +1,53 @@
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ '/' | relative_url }}">首页</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                          元素设计
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{{ '/element-designs/' | relative_url }}">全部</a></li>
+                          <li><a class="dropdown-item" href="{{ '/element-designs/furniture/' | relative_url }}">家具</a></li>
+                          <li><a class="dropdown-item" href="{{ '/element-designs/facade/' | relative_url }}">建筑外立面</a></li>
+                          <li><a class="dropdown-item" href="{{ '/element-designs/garden/' | relative_url }}">园林</a></li>
+                          <li><a class="dropdown-item" href="{{ '/element-designs/farm/' | relative_url }}">农田和牧场</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                          建材百科
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{{ '/materials/' | relative_url }}">全部</a></li>
+                          <li><a class="dropdown-item" href="{{ '/materials/wood/' | relative_url }}">木材</a></li>
+                          <li><a class="dropdown-item" href="{{ '/materials/stone/' | relative_url }}">石材</a></li>
+                          <li><a class="dropdown-item" href="{{ '/materials/others/' | relative_url }}">其他</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ '/tutorials/' | relative_url }}">操作教程</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                          建筑成品
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{{ '/buildings/' | relative_url }}">全部</a></li>
+                          <li><a class="dropdown-item" href="{{ '/buildings/survival/' | relative_url }}">生存向</a></li>
+                          <li><a class="dropdown-item" href="{{ '/buildings/creative/' | relative_url }}">纯建筑</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
