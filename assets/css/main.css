@@ -184,19 +184,41 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-image {
-  width: 100%;
-  display: block;
+  width: 100%; /* 图片宽度占满容器 */
+  height: auto; /* 高度自动调整保持比例 */
+  display: block; /* 消除图片底部间隙 */
+  max-width: 100%; /* 确保不超过容器宽度 */
 }
 
-.hero-overlay {
+.hero-text-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.6);
-  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.hero-text-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text-container p {
+  margin-bottom: 15px;
+}
+
+/* 确保页面其他部分不会影响图片容器 */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
