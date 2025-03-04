@@ -178,3 +178,25 @@ body {
 .sidebar .card {
   margin-bottom: 1.5rem;
 }
+
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  padding: 30px 0;
+}
