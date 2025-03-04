@@ -1,0 +1,81 @@
+---
+​---
+layout: default
+title: 首页
+​---
+
+<!-- 顶部大图 -->
+<div class="hero-section">
+    <div class="hero-image">
+        <img src="{{ '/assets/images/header-bg.jpg' | relative_url }}" alt="雾锁王国" class="img-fluid w-100">
+    </div>
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-text">
+                <h1>欢迎来到雾锁王国建筑攻略社区</h1>
+                <p>这里收集了游戏中最实用的建筑技巧、灵感和成品展示</p>
+                <a href="{{ '/tutorials/' | relative_url }}" class="btn btn-primary">开始学习</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <main class="col-md-9">
+            <h2 class="border-bottom pb-2 mb-4">推荐作品</h2>
+
+            <div class="row">
+                {% assign featured_buildings = site.posts | where_exp: "post", "post.categories contains 'buildings'" | limit: 6 %}
+                {% for post in featured_buildings %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        {% if post.thumbnail %}
+                        <img src="{{ post.thumbnail | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="text-center mb-5">
+                <a href="{{ '/buildings/' | relative_url }}" class="btn btn-outline-secondary">查看全部建筑作品</a>
+            </div>
+
+            <h2 class="border-bottom pb-2 mb-4">最新上传</h2>
+
+            <div class="row">
+                {% assign latest_posts = site.posts | limit: 6 %}
+                {% for post in latest_posts %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        {% if post.thumbnail %}
+                        <img src="{{ post.thumbnail | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text small text-muted">{{ post.date | date: "%Y-%m-%d" }}</p>
+                            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+        
+        <aside class="col-md-3">
+            {% include sidebar.html %}
+        </aside>
+    </div>
+</div>
+---
