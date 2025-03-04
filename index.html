@@ -3,49 +3,31 @@ layout: default
 title: 首页
 ---
 
-<div class="hero-container">
-  <img src="{{ site.baseurl }}/assets/images/header-bg.jpg" alt="雾锁王国" class="hero-image">
-  <div class="hero-text-container">
-    <h1>欢迎来到雾锁王国建筑攻略社区</h1>
-    <p>这里收集了游戏中最实用的建筑技巧、灵感和成品展示</p>
-    <a href="{{ '/tutorials/' | relative_url }}" class="btn btn-primary">开始学习</a>
+<!-- 顶部横幅部分 -->
+<div class="banner-container">
+  <div class="banner-image" style="background-image: url('{{ site.baseurl }}/assets/images/header-bg.jpg');">
+    <div class="banner-overlay">
+      <div class="banner-content">
+        <h1>欢迎来到雾锁王国建筑攻略社区</h1>
+        <p>这里收集了游戏中最实用的建筑技巧、灵感和成品展示</p>
+        <a href="{{ '/tutorials/' | relative_url }}" class="btn btn-primary">开始学习</a>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="container">
+<!-- 主内容区域 -->
+<div class="container mt-5">
   <div class="row">
+    <!-- 左侧主内容 -->
     <div class="col-md-8">
-      <h2>推荐作品</h2>
+      <h2 class="section-title">推荐作品</h2>
       <p>这里将展示一些优秀的建筑作品。</p>
       
-      <h2 class="mt-4">最新文章</h2>
       <div class="row">
         {% for post in site.posts limit:3 %}
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.date | date: "%Y-%m-%d" }}</p>
-              <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-primary">查看详情</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card mb-4">
-        <div class="card-header">分类导航</div>
-        <div class="card-body">
-          <ul class="list-unstyled">
-            <li><a href="{{ '/buildings/' | relative_url }}">建筑成品</a></li>
-            <li><a href="{{ '/materials/' | relative_url }}">建材百科</a></li>
-            <li><a href="{{ '/element-designs/' | relative_url }}">元素设计</a></li>
-            <li><a href="{{ '/tutorials/' | relative_url }}">操作教程</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+              <p class="card-text small">{{ post
