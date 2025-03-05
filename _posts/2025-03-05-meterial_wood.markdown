@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "示例文章"
+title: "精致木块"
 date: 2025-03-05
 categories: [materials, wood]
 material_type: 木块
