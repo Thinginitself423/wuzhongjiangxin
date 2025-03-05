@@ -58,6 +58,16 @@
           margin-bottom: 1rem;
       }
       
+      /* 导航栏样式在大图下方 */
+      .navbar {
+          margin-top: 0;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      /* 确保大图与导航栏无缝衔接 */
+      .full-width-banner {
+          margin-bottom: 0;
+      }
+
       /* 内容区样式 */
       .section-title {
           border-bottom: 2px solid #eee;
@@ -175,11 +185,20 @@
       }     
     </style>
 </head>
+</head>
 <body>
-    {% include header.html %}
+    <div class="site-title-bar d-flex justify-content-center align-items-center bg-dark p-2 text-white">
+        <h1 class="m-0" style="font-size: 1.5rem;">雾锁王国建筑攻略社区</h1>
+    </div>
     
     <div class="content">
         {{ content }}
+    </div>
+    
+    {% include header.html %}
+    
+    <div class="container mt-4">
+        <!-- 页面主要内容 -->
     </div>
     
     {% include footer.html %}
