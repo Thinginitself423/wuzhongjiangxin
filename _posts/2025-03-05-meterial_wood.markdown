@@ -1,10 +1,13 @@
+---
 layout: post
 title: "示例文章"
-date: 2025-02-28
+date: 2025-03-25
 categories: [materials, wood]
-material_type: 木材
-
+material_type: 木块
 thumbnail: /assets/images/materials/wood1.jpg
+---
+
+
 ---
 
 # 建材示例
@@ -37,6 +40,6 @@ thumbnail: /assets/images/materials/wood1.jpg
 
 ## 建筑示例
 
-![橡木农舍](/assets/images/examples/oak-farmhouse.jpg)
+![石质农舍](/assets/images/examples/oak-farmhouse.jpg)
 
 _使用橡木框架与石材基础搭建的农舍_
