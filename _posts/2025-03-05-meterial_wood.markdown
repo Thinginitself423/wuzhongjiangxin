@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "示例文章"
-date: 2025-03-25
+date: 2025-03-05
 categories: [materials, wood]
 material_type: 木块
 thumbnail: /assets/images/materials/wood1.jpg
