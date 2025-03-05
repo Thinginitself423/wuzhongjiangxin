@@ -1,6 +1,6 @@
 ---
 layout: video
-title: "中世纪城堡"
+title: "四合院，但是欧式"
 date: 2025-02-28
 categories: [buildings, creative]
 tags: [欧式, 庭院, 四合院]

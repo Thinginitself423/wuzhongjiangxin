@@ -4,7 +4,7 @@ date: 2025-02-28
 categories: [materials, wood]
 material_type: 木材
 
-thumbnail: /assets/images/materials/oak-wood.jpg
+thumbnail: /assets/images/materials/wood1.jpg
 ---
 
 # 建材示例
