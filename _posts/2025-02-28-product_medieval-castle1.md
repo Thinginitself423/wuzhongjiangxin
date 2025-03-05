@@ -6,7 +6,7 @@ categories: [buildings, creative]
 tags: [城堡, 中世纪, 石材建筑]
 building_type: 纯建筑
 building_style: 中世纪
-thumbnail: /assets/images/buildings/medieval-castle.jpg
+thumbnail: /assets/images/buildings/2025-02-28-product_medieval-castle1.jpg
 video_platform: bilibili
 video_id: 12345678
 ai_summary: "这座精美的中世纪城堡采用了石砖和深色橡木作为主要建材，包含了中央主堡、四座角楼和围墙。建筑中融入了许多中世纪细节，如旗帜、箭垛和火炬装饰。"

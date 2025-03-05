@@ -12,17 +12,76 @@ title: 首页
   </div>
 </div>
 
-<div class="content-container">
-  <h2>推荐作品</h2>
+<!-- 新增：横向导航按钮 -->
+<div class="quick-nav-bar">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col quick-nav-item">
+        <a href="{{ '/element-designs/' | relative_url }}">元素设计</a>
+      </div>
+      <div class="col quick-nav-item">
+        <a href="{{ '/materials/' | relative_url }}">建材百科</a>
+      </div>
+      <div class="col quick-nav-item">
+        <a href="{{ '/tutorials/' | relative_url }}">操作教程</a>
+      </div>
+      <div class="col quick-nav-item">
+        <a href="{{ '/buildings/' | relative_url }}">建筑成品</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="section-title">推荐作品</h2>
   <p>这里将展示一些优秀的建筑作品。</p>
   
-  <h2>最新文章</h2>
   <div class="row">
-    {% for post in site.posts limit:2 %}
-      <div class="col-md-6">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.date | date: "%Y-%m-%d" }}</p>
-        <a href="{{ post.url | relative_url }}">查看详情</a>
+    {% assign featured_posts = site.posts | where_exp: "post", "post.categories contains 'buildings'" | limit: 3 %}
+    {% for post in featured_posts %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          {% if post.thumbnail %}
+            <img src="{{ post.thumbnail | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+          {% else %}
+            <div class="card-img-placeholder bg-light d-flex align-items-center justify-content-center" style="height: 180px;">
+              <span class="text-muted">无图片</span>
+            </div>
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text small text-muted">{{ post.date | date: "%Y-%m-%d" }}</p>
+            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">查看详情</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <h2 class="section-title mt-5">最新文章</h2>
+  
+  <div class="row">
+    {% for post in site.posts limit:4 %}
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          {% if post.thumbnail %}
+            <img src="{{ post.thumbnail | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+          {% else %}
+            <div class="card-img-placeholder bg-light d-flex align-items-center justify-content-center" style="height: 140px;">
+              <span class="text-muted">无图片</span>
+            </div>
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text small text-muted">{{ post.date | date: "%Y-%m-%d" }}</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">查看详情</a>
+          </div>
+        </div>
       </div>
     {% endfor %}
   </div>
