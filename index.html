@@ -3,8 +3,9 @@ layout: default
 title: 首页
 ---
 
+<!-- 顶部大图 -->
 <div class="full-width-banner">
-  <img src="{{ site.baseurl }}/assets/images/header-bg.jpg" alt="雾锁王国">
+  <img src="{{ site.baseurl }}/assets/images/header-bg.jpg" alt="雾锁王国" class="img-fluid w-100">
   <div class="banner-text">
     <h1>欢迎来到雾锁王国建筑攻略社区</h1>
     <p>这里收集了游戏中最实用的建筑技巧、灵感和成品展示</p>
@@ -12,6 +13,57 @@ title: 首页
   </div>
 </div>
 
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">首页</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if page.url contains '/element-designs/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
+            元素设计
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ '/element-designs/' | relative_url }}">全部</a></li>
+            <li><a class="dropdown-item" href="{{ '/element-designs/furniture/' | relative_url }}">家具</a></li>
+            <li><a class="dropdown-item" href="{{ '/element-designs/facade/' | relative_url }}">建筑外立面</a></li>
+            <li><a class="dropdown-item" href="{{ '/element-designs/garden/' | relative_url }}">园林</a></li>
+            <li><a class="dropdown-item" href="{{ '/element-designs/farm/' | relative_url }}">农田和牧场</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if page.url contains '/materials/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
+            建材百科
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ '/materials/' | relative_url }}">全部</a></li>
+            <li><a class="dropdown-item" href="{{ '/materials/wood/' | relative_url }}">木材</a></li>
+            <li><a class="dropdown-item" href="{{ '/materials/stone/' | relative_url }}">石材</a></li>
+            <li><a class="dropdown-item" href="{{ '/materials/others/' | relative_url }}">其他</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/tutorials/' %}active{% endif %}" href="{{ '/tutorials/' | relative_url }}">操作教程</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if page.url contains '/buildings/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown">
+            建筑成品
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ '/buildings/' | relative_url }}">全部</a></li>
+            <li><a class="dropdown-item" href="{{ '/buildings/survival/' | relative_url }}">生存向</a></li>
+            <li><a class="dropdown-item" href="{{ '/buildings/creative/' | relative_url }}">纯建筑</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 主要内容区域 -->
 <div class="container mt-5">
   <h2 class="section-title">推荐作品</h2>
   <p>这里将展示一些优秀的建筑作品。</p>
@@ -66,3 +118,33 @@ title: 首页
     {% endfor %}
   </div>
 </div>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white mt-5 py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>雾锁王国建筑攻略社区</h5>
+        <p>专注于分享游戏中最实用的建筑技巧和灵感。</p>
+      </div>
+      <div class="col-md-3">
+        <h5>栏目</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ '/element-designs/' | relative_url }}" class="text-light">元素设计</a></li>
+          <li><a href="{{ '/materials/' | relative_url }}" class="text-light">建材百科</a></li>
+          <li><a href="{{ '/tutorials/' | relative_url }}" class="text-light">操作教程</a></li>
+          <li><a href="{{ '/buildings/' | relative_url }}" class="text-light">建筑成品</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>关注我们</h5>
+        <p>本站内容持续更新中...</p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col text-center">
+        <p>&copy; {{ site.time | date: '%Y' }} 雾锁王国建筑攻略社区. 保留所有权利。</p>
+      </div>
+    </div>
+  </div>
+</footer>
